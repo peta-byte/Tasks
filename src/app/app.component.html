@@ -1,0 +1,16 @@
+<div class="main">
+    <div class="header">
+        <p>My Board</p>
+    </div>
+    <div *ngIf="board else noData" class="board">
+        <ng-container *ngIf="statuses?.length">
+            <app-lane [id]="status" *ngFor="let status of statuses" [tasks]="filterLaneData(status)" [title]="statusNames[status]"></app-lane>
+        </ng-container>
+    </div>
+</div>
+
+<ng-template #noData>
+    <div class="noData">
+        <p>Woops! We broke something.</p>
+    </div>
+</ng-template>
