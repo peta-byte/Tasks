@@ -1,0 +1,26 @@
+.main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+}
+
+.board {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.noData {
+    text-align: center;
+    height: 100%;
+}
+
+app-lane {
+    height: 100%;
+    width: 100%;
+}
