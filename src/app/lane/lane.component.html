@@ -1,13 +1,25 @@
-<div class="lane">
+<!--<div class="lane">
     <div class="title">
         <p>{{title}}</p>
     </div>
     <div class="content">
         <ng-container *ngIf="tasks?.length > 0">
-            <div [id]="task.taskID" class="task" *ngFor="let task of tasks">
-                <p>{{task.taskName}}</p>
-                <p>{{task.priority}}</p>
-            </div>
+            <mat-card [id]="task.taskID" class="task" *ngFor="let task of tasks">
+                <mat-card-title>{{task.taskName}}</mat-card-title>
+                <mat-card-content>{{task.priority}}</mat-card-content>
+            </mat-card>
         </ng-container>
     </div>
-</div>
+</div>-->
+
+<mat-card class="lane">
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-content>
+        <ng-container *ngIf="tasks?.length > 0">
+            <mat-card [id]="task.taskID" *ngFor="let task of tasks">
+                <mat-card-title>{{task.taskName}}</mat-card-title>
+                <mat-card-content>{{task.priority}}</mat-card-content>
+            </mat-card>
+        </ng-container>
+    </mat-card-content>
+</mat-card>
